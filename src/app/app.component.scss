@@ -1,0 +1,368 @@
+.main {
+  margin: 132px 0 81px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .main-info {
+      max-width: 622px;
+
+      h1 {
+        font-size: 45px;
+        font-family: MullerExtraBold, sans-serif;
+        line-height: 1.222;
+      }
+
+      .main-advantages {
+        margin-top: 13px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .advantage {
+          max-width: 306px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 47px;
+
+          .advantage-text {
+            margin-left: 16px;
+
+            .advantage-title {
+              font-size: 16px;
+              font-family: MullerExtraBold, sans-serif;
+              color: rgb(255, 175, 24);
+              text-transform: uppercase;
+              margin-bottom: 10px;
+            }
+
+            .advantage-description {
+              font-size: 16px;
+              color: rgb(185, 145, 80);
+            }
+          }
+        }
+      }
+
+      .main-action {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+.double-title {
+  color: rgb(185, 145, 80);
+
+  span {
+    color: #ffaf18;
+  }
+}
+
+.btn {
+  background-color: rgb(255, 175, 24);
+  width: 224px;
+  outline: none;
+  padding: 22px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: MullerBold, sans-serif;
+  color: rgb(56, 36, 0);
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.products {
+  padding: 80px 0 120px 0;
+
+  .products-title {
+    font-size: 35px;
+    font-family: MullerBold, sans-serif;
+    color: rgb(189, 152, 92);
+    text-align: center;
+  }
+
+  .products-items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    justify-content: space-between;
+
+    .product {
+      width: 282px;
+      box-shadow: 0px 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+      background-color: white;
+      text-align: center;
+      padding: 15px 20px;
+      box-sizing: border-box;
+      margin-top: 24px;
+
+      &:hover {
+        .product-image {
+          transform: scale(1.1);
+        }
+      }
+
+      .product-image {
+        height: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .product-title {
+        font-size: 18px;
+        font-family: MullerBold, sans-serif;
+        color: rgb(56, 36, 0);
+      }
+
+      .product-text {
+        font-size: 14px;
+        color: rgb(24, 26, 26);
+        line-height: 1.286;
+        height: 49px;
+        margin: 14px 0 15px 0;
+      }
+
+      .product-action {
+        .btn {
+          width: 242px;
+          height: 50px;
+          padding: 17px;
+        }
+      }
+    }
+  }
+}
+
+.order {
+  padding: 120px 0 115px 0;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    .order-text {
+      max-width: 384px;
+
+      .order-text-title {
+        font-size: 35px;
+        font-family: MullerExtraBold, sans-serif;
+        font-weight: bold;
+        line-height: 1.286;
+        text-align: left;
+        margin-bottom: 65px;
+      }
+
+      .order-text-message {
+        font-size: 16px;
+        color: rgb(185, 145, 80);
+        line-height: 1.5;
+      }
+    }
+
+    .order-form {
+      margin-left: 122px;
+      max-width: 330px;
+    }
+
+    .order-image {
+      width: 282px;
+      position: relative;
+      margin-left: 78px;
+
+      .img {
+        position: absolute;
+        bottom: -35px;
+        left: 0;
+      }
+    }
+  }
+
+  .btn {
+    width: 330px;
+    padding: 23px 22px 24px 22px;
+    height: 60px;
+  }
+}
+
+.order-input {
+  border-width: 1px;
+  border-color: rgb(185, 145, 80);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+  width: 330px;
+  height: 60px;
+  font-size: 18px;
+  color: rgb(119, 94, 49);
+  padding: 23px 22px 24px 22px;
+  outline: none;
+  margin-bottom: 24px;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: rgb(203, 168, 110);
+  }
+}
+
+
+/* 1024 -1229 */
+@media screen and (max-width: 1229px) {
+  .main-image {
+    width: 400px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .products {
+    .products-items {
+      justify-content: center;
+
+      .product {
+        margin: 12px;
+      }
+    }
+  }
+
+  .order .container {
+    max-width: 1024px;
+
+    .order-form {
+      margin-left: 45px;
+    }
+  }
+}
+
+/* 768 - 1024 */
+@media screen and (max-width: 1023px) {
+  .main {
+    margin-top: 70px;
+
+    .container {
+      flex-direction: column;
+
+      .main-info {
+        order: 2;
+
+        h1 {
+          text-align: center;
+        }
+
+        .main-action {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .main-image {
+    order: 1;
+    margin-bottom: 30px;
+  }
+
+  .products {
+    padding-top: 0;
+    padding-bottom: 40px;
+  }
+
+  .order {
+    padding-top: 60px;
+    position: relative;
+
+    .container {
+      .order-image {
+        position: absolute;
+        z-index: -1;
+        right: calc(50% - 400px);
+      }
+    }
+  }
+
+  .order-image img {
+    position: relative;
+  }
+
+  .order .container {
+    justify-content: center;
+  }
+}
+
+/* 425 - 767 */
+@media screen and (max-width: 767px) {
+  .main-info {
+    h1 {
+      line-height: 45px;
+    }
+  }
+
+  .main-advantages {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .order .container {
+    flex-direction: column;
+    align-items: center;
+
+    .order-form {
+      margin-left: 0;
+
+    }
+  }
+
+  .order-text-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .order-text-message {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+
+/* 425 - 656 */
+@media screen and (max-width: 656px) {
+  .main-advantages {
+    max-width: 306px;
+  }
+}
+
+/* 375 - 424 */
+@media screen and (max-width: 424px) {
+  .main-image {
+    width: 100%;
+  }
+}
+
+/* 374 - 320 */
+@media screen and (max-width: 374px) {
+  .main-info {
+    h1 {
+      font-size: 38px;
+    }
+  }
+
+  .order-input {
+    width: 290px;
+  }
+
+  .order {
+    .btn {
+      width: 290px;
+    }
+  }
+
+  .order-form {
+    text-align: center;
+  }
+}
