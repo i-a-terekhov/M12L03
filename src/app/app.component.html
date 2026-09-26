@@ -1,13 +1,13 @@
 <section class="main">
   <div class="container">
-    <div class="main-info animate__animated animate__backInLeft">
+    <div class="main-info" id="navigate-pizzas">
       <h1 class="double-title">
         Самая вкусная пицца в мире <span>только в Pizza Cheff</span>
       </h1>
       <div class="main-advantages">
         <div class="advantage">
           <div class="advantage-image">
-            <img src="assets/images/hop.png" alt="Колос">
+            <img alt="Hop" src="assets/images/hop.png">
           </div>
           <div class="advantage-text">
             <div class="advantage-title">Лучшее тесто</div>
@@ -18,10 +18,10 @@
         </div>
         <div class="advantage">
           <div class="advantage-image">
-            <img src="assets/images/kitchen-pack.png" alt="Поварской колпак">
+            <img alt="Kitchen-pack" src="assets/images/kitchen-pack.png">
           </div>
           <div class="advantage-text">
-            <div class="advantage-title">лучшие повара</div>
+            <div class="advantage-title">Лучшие повара</div>
             <div class="advantage-description">
               Пиццы готовят самые профессиональные итальянские повара
             </div>
@@ -29,10 +29,10 @@
         </div>
         <div class="advantage">
           <div class="advantage-image">
-            <img src="assets/images/seo-and-web.png" alt="Знак качества">
+            <img alt="Seo and web" src="assets/images/seo-and-web.png">
           </div>
           <div class="advantage-text">
-            <div class="advantage-title">гарантия качества</div>
+            <div class="advantage-title">Гарантия качества</div>
             <div class="advantage-description">
               Наша пиццерия получила множество наград и признаний по всему миру
             </div>
@@ -40,10 +40,10 @@
         </div>
         <div class="advantage">
           <div class="advantage-image">
-            <img src="assets/images/holidays.png" alt="Поднос на руке">
+            <img alt="Holidays" src="assets/images/holidays.png">
           </div>
           <div class="advantage-text">
-            <div class="advantage-title">отборные рецепты</div>
+            <div class="advantage-title">Отборные рецепты</div>
             <div class="advantage-description">
               Мы используем рецепты от мировых лидеров в изготовлении пиццы
             </div>
@@ -55,21 +55,21 @@
       </div>
     </div>
     <div class="main-image">
-      <img src="assets/images/pizza_big.png" alt="Big pizza image">
+      <img alt="Big pizza" src="assets/images/pizza_big.png">
     </div>
   </div>
 </section>
 
 <section class="products" #productsElement>
   <div class="container">
-    <h2 class="products-title" id="pizzas">Выберите свою любимую пиццу </h2>
+    <h2 class="products-title" id="products-title">Выберите свою любимую пиццу </h2>
     <div class="products-items">
-      <div class="product" *ngFor="let product of products; let i = index">
-        <a class="product-image" href="assets/images/products/pizza_image_1.png">
-          <img src="assets/images/products/{{product.image}}" alt="pizza image {{i+1}}">
-        </a>
-        <div class="product-title">{{product.title}}</div>
-        <div class="product-text">{{product.description}}
+      <div class="product" *ngFor="let product of products; let i = index;">
+        <div class="product-image">
+          <img alt="Product pizza {{i+1}}" src="assets/images/products/{{product.image}}">
+        </div>
+        <div class="product-title">{{ product.title }}</div>
+        <div class="product-text">{{ product.description }}
         </div>
         <div class="product-action">
           <button class="btn btn-add-to-cart" (click)="addToCart(product, orderElement)">В корзину</button>
@@ -81,7 +81,7 @@
 
 <section class="order" #orderElement>
   <div class="container">
-    <div class="order-text">
+    <div class="order-text" id="navigate-delivery">
       <div class="order-text-title double-title">
         <span>Хватит думать!</span> Доставим заказ за 30 минут!
       </div>
@@ -92,15 +92,13 @@
       </div>
     </div>
     <div class="order-form">
-      <form>
-        <input type="text" class="order-input" placeholder="Пицца" name='title' [(ngModel)]="formValues.productTitle">
-        <input type="text" class="order-input" placeholder="Адрес доставки" name='address' [(ngModel)]="formValues.address">
-        <input type="text" class="order-input" placeholder="Телефон" name='phone' [(ngModel)]="formValues.phone">
-        <button type="submit" class="btn" (click)="createOrder()">Оформить заказ</button>
-      </form>
+      <input class="order-input" id="product-input" placeholder="Пицца" type="text" [(ngModel)]="formValues.productTitle">
+      <input class="order-input" id="address-input" placeholder="Адрес доставки" type="text" [(ngModel)]="formValues.address">
+      <input class="order-input" id="phone-input" placeholder="Телефон" type="text" [(ngModel)]="formValues.phone">
+      <button class="btn" (click)="createOrder()">Оформить заказ</button>
     </div>
-    <div class="order-image wow animate__zoomIn">
-      <img src="assets/images/pizzzzza.png" alt="pizza">
+    <div class="order-image">
+      <img alt="Pizza" src="assets/images/pizzzzza.png">
     </div>
   </div>
 </section>
